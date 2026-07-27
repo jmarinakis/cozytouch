@@ -192,7 +192,7 @@ def get_model_infos(modelId: int, zoneName: str | None = None):
             0: HVACMode.OFF,
         }
         
-    elif (modelId >= 557 and modelId <= 561) or modelId in (1505, 1734):
+    elif (modelId >= 557 and modelId <= 561) or modelId == 1505 or (modelId >= 1734 and modelId <= 1740):
         name = "Air Conditioner "
         if zoneName is not None:
             modelInfos["name"] = name + "(" + zoneName + ")"
